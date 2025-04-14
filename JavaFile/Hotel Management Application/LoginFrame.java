@@ -12,25 +12,44 @@ public class LoginFrame extends JFrame {
     JPasswordField passwordField;
 
     public LoginFrame() {
-        setTitle("Hotel Login (File Based)");
-        setSize(300, 200);
+        setTitle("Hotel Login");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(350, 250);
         setLocationRelativeTo(null);
 
-        JPanel panel = new JPanel(new GridLayout(6, 1));
+        JPanel wrapperPanel = new JPanel(new GridBagLayout());
+        JPanel formPanel = new JPanel(new GridBagLayout());
+        formPanel.setPreferredSize(new Dimension(300, 180));
+        formPanel.setBorder(BorderFactory.createTitledBorder("Login / Sign Up"));
+
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(8, 8, 8, 8);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+
+        formPanel.add(new JLabel("Username:"), gbc);
+        gbc.gridy++;
         usernameField = new JTextField();
+        formPanel.add(usernameField, gbc);
+
+        gbc.gridy++;
+        formPanel.add(new JLabel("Password:"), gbc);
+        gbc.gridy++;
         passwordField = new JPasswordField();
+        formPanel.add(passwordField, gbc);
+
+        gbc.gridy++;
+        JPanel buttonPanel = new JPanel(new GridLayout(1, 2, 10, 0));
         JButton loginBtn = new JButton("Login");
         JButton signupBtn = new JButton("Sign Up");
+        buttonPanel.add(loginBtn);
+        buttonPanel.add(signupBtn);
+        formPanel.add(buttonPanel, gbc);
 
-        panel.add(new JLabel("Username:"));
-        panel.add(usernameField);
-        panel.add(new JLabel("Password:"));
-        panel.add(passwordField);
-        panel.add(loginBtn);
-        panel.add(signupBtn);
+        wrapperPanel.add(formPanel);
+        add(wrapperPanel);
 
-        add(panel);
         setVisible(true);
 
         loginBtn.addActionListener(e -> login());
@@ -56,8 +75,8 @@ public class LoginFrame extends JFrame {
             if (found) {
                 JOptionPane.showMessageDialog(this, "Login successful!");
                 DashboardFrame dashboard = new DashboardFrame(username);
-                dashboard.setLoginFrame(this); // pass reference
-                this.setVisible(false); // hide login
+                dashboard.setLoginFrame(this);
+                this.setVisible(false);
             } else {
                 JOptionPane.showMessageDialog(this, "Invalid credentials!", "Error", JOptionPane.ERROR_MESSAGE);
             }
@@ -118,6 +137,7 @@ public class LoginFrame extends JFrame {
     }
 
     public static void main(String[] args) {
-        new LoginFrame();
+        SwingUtilities.invokeLater(LoginFrame::new);
     }
 }
+
