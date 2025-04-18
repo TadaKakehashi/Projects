@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="signDate.css" />
+
+    <style>
+      .dob-input {
+        width: 60%;
+        height: 50px;
+        font-size: 18px;
+        padding: 10px;
+        margin: 10px auto;
+        display: block;
+        background-color: black;
+        color: white;
+        border: 1px solid whitesmoke;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      .name-row {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        gap: 10px;
+        margin: 10px auto;
+      }
+
+      .name-row input {
+        flex: 1;
+        padding: 10px;
+        font-size: 16px;
+        background-color: black;
+        color: whitesmoke;
+        border: 1px solid whitesmoke;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+
+     <div class="mainSignin">
+      <div class="container1" id="formContainer">
+        <div class="text1">
+          <h1>Hi ${User}!</h1>
+        </div>
+        <input
+          type="date"
+          id="dob"
+          class="dob-input"
+          placeholder="DD/MM/YYYY"
+          required
+        />
+
+        <div class="name-row">
+          <input type="text" id="fname" placeholder="First Name" required />
+          <input type="text" id="mname" placeholder="Middle Name" />
+          <input type="text" id="lname" placeholder="Last Name" required />
+        </div>
+
+        <button class="Sign-Up" onclick="letsMoveOn()">Let's Move On</button>
+      </div>
+    </div>
+    -->
+    <div class="mainSignin">
+      <div class="container1" id="formContainer">
+        <div class="text1">
+          <h1>Hello ${<span style="color: #2bff2b">User</span>}! Welcome.</h1>
+        </div>
+        <div class="cont1" style="width: 60%">
+          <p style="color: rgb(255, 255, 255); text-align: left">
+            contact email address<span style="color: #2bff2b">*</span>
+          </p>
+        </div>
+        <input
+          type="email"
+          id="email"
+          required
+          pattern="[a-zA-Z0-9._%+-]+@gmail\.com$"
+          title="Please enter a valid Gmail address"
+        />
+        <button class="Sign-Up" onclick="goToNext()">Sign Up</button>
+      </div>
+    </div>
+    <script src="signin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeepFakeDetection</title>
+    <link rel="stylesheet" href="main1.css" />
+  </head>
+  <body>
+    <div class="mainCont1">
+      <div class="nav">
+        <div class="logoNav">
+          <div class="logo"><img src="Logo.png" style="height: 45px;"></div>
+          <div class="nameLogo" style="font-size: 30px;"><span style="color: greenyellow;">Deepfake</span> Detection</div>
+        </div>
+      </div>
+
+      <div class="video-upload-section">
+        <h1 style="font-size: 80px;">Upload Video for Analysis</h1>
+        <p style="font-size:40px;">Drop your video here or <label for="videoInput" class="upload-label">${select file}</label></p>
+        <input type="file" id="videoInput" accept="video/*" hidden>
+        
+        <div class="drop-area" id="dropArea">
+          <p>Drag & Drop Video Here</p>
+        </div>
+      
+        <button class="analyze-btn">Analyze Now</button>
+      </div>
+      <div class="bottomHero">
+        <div class="textBottom">
+          <h1 style="font-size: 120px;">Questions<span style="color: yellowgreen;">?</span></h1>
+          <h2 style="font-size: 100px">Let's Talk</h2>
+        </div>
+        <div class="reachOut">
+          <button class="reachBtn" onclick="location.href='reachout.html'">Reach Out</button>
+        </div>
+      </div>      
+
+      <footer class="footer">
+        <p>&copy; 2025 <span style="color: yellowgreen;">Deepfake Detection</span>. All rights reserved.</p>
+      </footer>
+    </div>
+    <script src="signin.js"></script>
+  </body>
+</html>

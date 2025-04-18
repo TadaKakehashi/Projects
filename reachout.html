@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reach Out</title>
+  <link rel="stylesheet" href="reachOut.css" />
+</head>
+<body>
+  <div class="mainReachOut">
+    <div class="container1" id="reachContainer">
+      <div class="text1">
+        <h1>Reach <span style="color: #2bff2b;">Out</span> to Us</h1>
+      </div>
+
+      <input type="text" id="name" placeholder="Your Full Name" required />
+      <input type="email" id="email" placeholder="Your Email (Gmail only)" pattern="[a-zA-Z0-9._%+-]+@gmail\.com$" required />
+      <input type="tel" id="phone" placeholder="Your Phone Number" pattern="[0-9]{10}" required />
+      <textarea id="message" placeholder="Your Message or Query" rows="5" required></textarea>
+
+      <button class="Sign-Up" onclick="submitQuery()">Submit</button>
+    </div>
+  </div>
+
+  <script>
+    function submitQuery() {
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email');
+  const phone = document.getElementById('phone');
+  const message = document.getElementById('message').value.trim();
+
+  if (!name || !email.value || !phone.value || !message) {
+    alert("Please fill out all fields.");
+    return;
+  }
+
+  if (!email.checkValidity()) {
+    alert("Please enter a valid Gmail address.");
+    return;
+  }
+
+  if (!phone.checkValidity()) {
+    alert("Phone number must be 10 digits.");
+    return;
+  }
+
+  alert(`Thanks ${name.split(' ')[0]}, we have received your query!`);
+  
+  // Optional: Redirect or reset form
+  // document.getElementById('reachContainer').reset();
+}
+
+  </script>
+</body>
+</html>

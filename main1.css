@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; 
+  user-select: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.mainCont1 {
+  width: 100%;
+  height: 70vh;
+  background-color: red;
+}
+
+.nav {
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+
+.button-nav1{
+  background: none;
+  border: none;
+  color: #5e5df0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  margin-right: 20px;
+}
+
+.button-nav1:hover {
+  border: 2px solid #5e5df0;
+}
+
+.button-nav2{
+  background: #5e5df0;
+  border-radius: 20px;
+  box-shadow: #5e5df0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 10px 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  margin-right: 80px;
+}
+
+.logoNav {
+  display: flex;
+  color: #ffffff;
+  height: 100%;
+  align-items: center;
+  padding-left: 50px;
+}
+
+
+.mainCont {
+  width: 100%;
+  height: 100%;
+  color: white; 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("mainContBack.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+
+.text1{
+  font-size: 45px;
+  font-weight: 100;
+}
+.text2 {
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.button-main {
+  background: #5e5df0;
+  border-radius: 20px;
+  box-shadow: #5e5df0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 20px 58px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+
+
+.hero1{
+  width: 100%;
+  height: 100vh;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+.heroCard1{
+  border-top: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: rgb(15, 15, 14);
+  height: 100%;
+}
+
+/* .cardContImg1{
+  height: 95%;
+  width: 40%;
+  background-color: rgb(16, 33, 33);
+  background-image: url("Hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 10px;
+} */
+.cardCont1{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+  padding-top: 95px;
+  padding-left: 80px;
+  padding-right: 80px;
+  font-size: 25px;
+}
+
+
+.heroCard2{
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items:baseline;
+  justify-content: space-evenly;
+}
+
+.img1{
+  margin: 40px;
+  height: 250px;
+  width: 250px;
+}
+
+
+.text3 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+.video-upload-section {
+  width: 100%;
+  padding: 180px 20px;
+  background-color: #0d0d0d;
+  color: white;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(dropDrag.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.upload-label {
+  color: greenyellow;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.drop-area {
+  margin: 20px auto;
+  padding: 60px;
+  border: 2px dashed #5e5df0;
+  border-radius: 12px;
+  background-color: #000000;
+  width: 60%;
+  max-width: 600px;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.drop-area.dragover {
+  background-color: #000000;
+  border-color: greenyellow;
+  color: white;
+}
+
+.analyze-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #5e5df0;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.analyze-btn:hover {
+  background-color: #4848c4;
+}
+
+.bottomHero {
+  width: 100%;
+  height: 55vh;
+  color: #ffffff;
+  background-color: #000000;
+  border-top: 2px solid rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),url(contact.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.textBottom {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reachOut {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 50px;
+  
+}
+
+.reachText {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.reachBtn {
+  width: 210px;
+  padding: 12px 28px;
+  background-color: transparent;
+  border: 2px solid yellowgreen;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.reachBtn:hover {
+  background-color: yellowgreen;
+  color: black;
+}
+
+.footer {
+  border-top: 2px solid #ffffff;
+  height: 10vh;
+  width: 100%;
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Enhancements */
+
+@media screen and (max-width: 1200px) {
+  .text1 {
+    font-size: 35px;
+  }
+  .text2 {
+    font-size: 22px;
+  }
+  .cardCont1 {
+    font-size: 20px;
+    padding: 60px 40px;
+  }
+  .textBottom h1 {
+    font-size: 80px !important;
+  }
+  .textBottom h2 {
+    font-size: 60px !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .heroCard2 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .img1 {
+    width: 200px;
+    height: 200px;
+    margin: 20px 0;
+  }
+
+  .text3 {
+    font-size: 24px;
+  }
+
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logoNav {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .buttonNav {
+    margin-top: 10px;
+  }
+
+  .cardCont1 {
+    padding: 40px 20px;
+  }
+
+  .bottomHero {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text1 {
+    font-size: 28px;
+  }
+  .text2 {
+    font-size: 18px;
+  }
+
+  .button-main {
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+
+  .video-upload-section h1 {
+    font-size: 45px !important;
+  }
+
+  .video-upload-section p {
+    font-size: 24px !important;
+  }
+
+  .drop-area {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .textBottom h1 {
+    font-size: 60px !important;
+  }
+
+  .textBottom h2 {
+    font-size: 45px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo img {
+    height: 35px;
+  }
+
+  .nameLogo {
+    font-size: 20px !important;
+  }
+
+  .button-nav1,
+  .button-nav2 {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .text1 {
+    font-size: 22px;
+  }
+
+  .text2 {
+    font-size: 16px;
+  }
+
+  .heroCard1 {
+    flex-direction: column;
+  }
+
+  .cardCont1 {
+    font-size: 16px;
+  }
+
+  .bottomHero {
+    height: auto;
+  }
+
+  .textBottom h1 {
+    font-size: 40px !important;
+  }
+  .textBottom h2 {
+    font-size: 30px !important;
+  }
+
+  .reachBtn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
